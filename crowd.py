@@ -31,11 +31,11 @@ class CrowdServer(object):
     The ``ssl_verify`` parameter controls how and if certificates are verified.
     If ``True``, the SSL certificate will be verified.
     A CA_BUNDLE path can also be provided.
-    
+
     The ``client_cert`` tuple (cert,key) specifies a SSL client certificate and key files.
     """
 
-    def __init__(self, crowd_url, app_name, app_pass, ssl_verify=True, 
+    def __init__(self, crowd_url, app_name, app_pass, ssl_verify=True,
                  timeout=None, client_cert=None):
         self.crowd_url = crowd_url
         self.app_name = app_name
