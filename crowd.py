@@ -679,9 +679,11 @@ class CrowdServer(object):
             }
         }
 
+        # XXX WL extended expand (would expect <entity-type>.attributes but
+        #     it works)
         params = {
             'entity-type': entity_type,
-            'expand': entity_type,
+            'expand': '%s,attributes' % entity_type,
             'start-index': start_index,
             'max-results': max_results
         }
